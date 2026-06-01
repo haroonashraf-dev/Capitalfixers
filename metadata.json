@@ -1,0 +1,6 @@
+{
+  "name": "Capitalfixers",
+  "description": "Professional home services including AC repair, plumbing, electrician, cleaning, and appliance repair in Islamabad and Rawalpindi. Fast, reliable, and affordable.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
