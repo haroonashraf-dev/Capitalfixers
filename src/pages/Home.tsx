@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <ServicesSection />
+      <ServicesSection showHomeOnly={true} />
       <WhyChooseUs />
       <ProcessSection />
       <AreasSection />

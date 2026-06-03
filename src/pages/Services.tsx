@@ -11,8 +11,8 @@ export default function ServicesPage() {
     <>
       <div className="relative pt-12 pb-2 lg:pt-18 lg:pb-2 bg-slate-50 overflow-hidden">
         {/* Background elements */}
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-100/60 rounded-full opacity-50 -translate-y-1/2 translate-x-1/2" />
-        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-sky-100/50 rounded-full opacity-50 translate-y-1/2 -translate-x-1/2" />
+        <div className="absolute top-0 right-0 w-125 h-125 bg-blue-100/60 rounded-full opacity-50 -translate-y-1/2 translate-x-1/2" />
+        <div className="absolute bottom-0 left-0 w-125 h-125 bg-sky-100/50 rounded-full opacity-50 translate-y-1/2 -translate-x-1/2" />
         
         <div className="container mx-auto px-4 relative z-10 text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight mb-6">

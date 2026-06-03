@@ -23,14 +23,7 @@ export const services = [
     slug: "electrician-services",
     features: ["Wiring & Rewiring", "UPS Installation", "Fault Finding", "Breaker Fixing"]
   },
-  {
-    id: "sofa-cleaning",
-    title: "Sofa Cleaning",
-    description: "Deep shampoo capabilities to remove tough stains, dust, and allergens from your sofas, restoring their shine.",
-    icon: "Sofa",
-    slug: "sofa-cleaning",
-    features: ["Deep Shampoo Wash", "Stain Removal", "Fabric Protection", "Odor Neutralization"]
-  },
+  
   {
     id: "carpet-cleaning",
     title: "Carpet Cleaning",
@@ -38,6 +31,14 @@ export const services = [
     icon: "Brush",
     slug: "carpet-cleaning",
     features: ["Steam Cleaning", "Stain & Spot Treatment", "Quick Drying", "Dust Mite Removal"]
+  },
+  {
+    id: "sofa-cleaning",
+    title: "Sofa Cleaning",
+    description: "Deep shampoo capabilities to remove tough stains, dust, and allergens from your sofas, restoring their shine.",
+    icon: "Sofa",
+    slug: "sofa-cleaning",
+    features: ["Deep Shampoo Wash", "Stain Removal", "Fabric Protection", "Odor Neutralization"]
   },
   {
     id: "washing-machine",

@@ -4,7 +4,7 @@ import { Plus, Star } from 'lucide-react';
 import { defaultServices } from '../../data/defaultServices';
 import { ServiceItem } from '../../pages/Admin';
 
-export default function ServicesSection() {
+export default function ServicesSection({ showHomeOnly = false }: { showHomeOnly?: boolean }) {
   const [servicesList, setServicesList] = useState<ServiceItem[]>(() => {
     const stored = localStorage.getItem('local_services');
     if (stored) {
@@ -22,11 +22,18 @@ export default function ServicesSection() {
   });
 
   // Sort: Trendy or Seasonal on top
-  const sortedServices = [...servicesList].sort((a, b) => {
-    const aPriority = a.isTrendy || a.isSeasonal ? 1 : 0;
-    const bPriority = b.isTrendy || b.isSeasonal ? 1 : 0;
-    return bPriority - aPriority;
-  });
+  const sortedServices = [...servicesList]
+    .filter(service => {
+      if (showHomeOnly) {
+        return service.showOnHome !== false;
+      }
+      return true;
+    })
+    .sort((a, b) => {
+      const aPriority = a.isTrendy || a.isSeasonal ? 1 : 0;
+      const bPriority = b.isTrendy || b.isSeasonal ? 1 : 0;
+      return bPriority - aPriority;
+    });
 
   return (
     <section className="py-4 lg:py-6 bg-slate-50 relative overflow-hidden">
