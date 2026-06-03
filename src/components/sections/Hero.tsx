@@ -5,13 +5,13 @@ export default function Hero() {
   return (
     <section className="relative pt-4 sm:pt-12 pb-16 lg:pt-16 lg:pb-24 overflow-hidden bg-slate-50">
       {/* Background Decor */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#f1f5f9_1px,transparent_1px),linear-gradient(to_bottom,#f1f5f9_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_80%_60%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none"></div>
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#f1f5f9_1px,transparent_1px),linear-gradient(to_bottom,#f1f5f9_1px,transparent_1px)] bg-size[4rem_4rem] mask-[radial-gradient(ellipse_80%_60%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none"></div>
       
       {/* Blur Orbs */}
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-200/30 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/3 pointer-events-none" style={{ transform: 'translateZ(0)' }} />
-      <div className="absolute bottom-1/4 left-0 w-[400px] h-[400px] bg-sky-200/30 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/2 pointer-events-none" style={{ transform: 'translateZ(0)' }} />
+      <div className="absolute top-0 right-0 w-125 h-125 bg-blue-200/30 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/3 pointer-events-none" style={{ transform: 'translateZ(0)' }} />
+      <div className="absolute bottom-1/4 left-0 w-100 h-100 bg-sky-200/30 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/2 pointer-events-none" style={{ transform: 'translateZ(0)' }} />
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full max-w-[1400px]">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full max-w-350">
         <div className="flex flex-row items-start justify-between w-full">
           
           {/* Left Content */}
@@ -23,7 +23,7 @@ export default function Hero() {
             
             <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-7xl font-extrabold text-slate-900 tracking-tight leading-[1.05] mb-3 sm:mb-6">
               Home repairs, <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-sky-500">done right.</span>
+              <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-700 to-sky-500">done right.</span>
             </h1>
             
             <p className="text-[10px] sm:text-sm md:text-lg lg:text-xl text-slate-600 font-medium mb-5 sm:mb-10 leading-relaxed max-w-xl">
@@ -77,16 +77,18 @@ export default function Hero() {
           {/* Right Image Composition */}
           <div className="w-[45%] md:w-1/2 relative mt-12 sm:mt-16 md:mt-0 pt-0 lg:pt-4 translate-y-1">
             {/* Main Image Container */}
-            <div className="relative z-10 w-full aspect-[3/4] sm:aspect-[4/3] lg:aspect-[4/3] rounded-l-2xl sm:rounded-l-[2.5rem] rounded-r-none overflow-hidden shadow-2xl border-2 sm:border-4 border-r-0 border-white -mr-4 sm:-mr-6 lg:-mr-8">
+            <div className="relative z-10 w-full aspect-3/4 sm:aspect-4/3 lg:aspect-4/3 rounded-l-2xl sm:rounded-l-[2.5rem] rounded-r-none overflow-hidden shadow-2xl border-2 sm:border-4 border-r-0 border-white -mr-4 sm:-mr-6 lg:-mr-8">
               <div className="absolute inset-0 bg-slate-900/10 z-10"></div>
               <img 
                 src="https://media.istockphoto.com/id/1278554684/photo/the-air-conditioner-master-in-a-medical-protective-face-mask-checks-and-refills-the-air.jpg?s=1024x1024&w=is&k=20&c=R9tHNCAepunLi9nD4t9VLgfpfYcQ7PYVJJPBw2Hox9E=" 
                 alt="Professional technician fixing an AC unit" 
+                fetchPriority="high"
+                decoding="async"
                 className="w-full h-full object-cover scale-105 hover:scale-110 transition-transform duration-700 ease-in-out"
               />
               
               {/* Gradient overlay for better text contrast */}
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-slate-900/20 to-transparent z-10"></div>
+              <div className="absolute inset-0 bg-linear-to-t from-slate-900/70 via-slate-900/20 to-transparent z-10"></div>
               
               <div className="absolute bottom-3 left-3 sm:bottom-6 sm:left-6 z-20">
                 <h3 className="text-white font-bold text-xs sm:text-xl md:text-2xl mb-0.5 sm:mb-2">Expert AC Repair</h3>
@@ -98,7 +100,7 @@ export default function Hero() {
             <div className="absolute top-[10%] sm:top-8 -left-6 sm:-left-12 lg:-left-16 bg-white p-2 sm:p-4 rounded-lg sm:rounded-2xl shadow-xl border border-slate-100 z-30 flex items-center gap-2 sm:gap-4 animate-in fade-in slide-in-from-bottom-8 duration-700 delay-300">
               <div className="relative hidden xs:block sm:block">
                 <div className="w-8 h-8 sm:w-12 sm:h-12 rounded-full overflow-hidden border-2 border-slate-100">
-                  <img src="https://media.istockphoto.com/id/2211719485/photo/technician-with-screwdriver-repairing-air-conditioner-at-home.jpg?s=1024x1024&w=is&k=20&c=4g3IBTKK8GWr35X_4hLv9kbiSNS_J3OogBKwk9-B6iU=" alt="Tech" className="w-full h-full object-cover" />
+                  <img src="https://media.istockphoto.com/id/2211719485/photo/technician-with-screwdriver-repairing-air-conditioner-at-home.jpg?s=1024x1024&w=is&k=20&c=4g3IBTKK8GWr35X_4hLv9kbiSNS_J3OogBKwk9-B6iU=" alt="Tech" loading="lazy" className="w-full h-full object-cover" />
                 </div>
                 <div className="absolute bottom-0 right-0 w-2 h-2 sm:w-3.5 sm:h-3.5 bg-green-500 border border-white rounded-full"></div>
               </div>
@@ -111,7 +113,7 @@ export default function Hero() {
             </div>
 
             {/* Background Blob behind image */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full max-w-[450px] bg-sky-200/50 rounded-full blur-[40px] sm:blur-[60px] z-0 pointer-events-none" style={{ transform: 'translateZ(0)' }} />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full max-w-112.5 bg-sky-200/50 rounded-full blur-2xl sm:blur-[60px] z-0 pointer-events-none" style={{ transform: 'translateZ(0)' }} />
           </div>
           
         </div>

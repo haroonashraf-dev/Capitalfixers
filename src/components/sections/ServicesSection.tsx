@@ -5,29 +5,21 @@ import { defaultServices } from '../../data/defaultServices';
 import { ServiceItem } from '../../pages/Admin';
 
 export default function ServicesSection() {
-  const [servicesList, setServicesList] = useState<ServiceItem[]>([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    function fetchServices() {
-      const stored = localStorage.getItem('local_services');
-      if (stored) {
-        let parsed = JSON.parse(stored);
-        parsed = parsed.map((item: any) => {
-          if (!item.categoryId) {
-             const def = defaultServices.find(d => d.id === item.id);
-             if (def) item.categoryId = def.categoryId;
-          }
-          return item;
-        });
-        setServicesList(parsed);
-      } else {
-        setServicesList(defaultServices);
-      }
-      setLoading(false);
+  const [servicesList, setServicesList] = useState<ServiceItem[]>(() => {
+    const stored = localStorage.getItem('local_services');
+    if (stored) {
+      let parsed = JSON.parse(stored);
+      parsed = parsed.map((item: any) => {
+        if (!item.categoryId) {
+           const def = defaultServices.find(d => d.id === item.id);
+           if (def) item.categoryId = def.categoryId;
+        }
+        return item;
+      });
+      return parsed;
     }
-    fetchServices();
-  }, []);
+    return defaultServices;
+  });
 
   // Sort: Trendy or Seasonal on top
   const sortedServices = [...servicesList].sort((a, b) => {
@@ -40,34 +32,29 @@ export default function ServicesSection() {
     <section className="py-4 lg:py-6 bg-slate-50 relative overflow-hidden">
       {/* Minimal background elements */}
       <div 
-        className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] rounded-full opacity-50 pointer-events-none"
+        className="absolute top-0 left-1/2 -translate-x-1/2 w-250 h-125 rounded-full opacity-50 pointer-events-none"
         style={{
           background: 'radial-gradient(circle, rgba(219,234,254,0.7) 0%, rgba(219,234,254,0) 70%)',
           transform: 'translateZ(0)'
         }}
       />
       
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full max-w-[1400px]">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full max-w-350">
         <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-4">
           
   
         </div>
 
-        {loading ? (
-          <div className="flex justify-center items-center py-12">
-            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
-          </div>
-        ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
-            {sortedServices.map((service) => (
-              <div 
-                key={service.id}
-                className="group relative flex flex-col p-4 sm:p-5 rounded-2xl bg-white border border-slate-200/80 shadow-sm hover:shadow-xl hover:border-blue-200 transition-all duration-300 transform hover:-translate-y-1"
-              >
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
+          {sortedServices.map((service) => (
+            <div 
+              key={service.id}
+              className="group relative flex flex-col p-4 sm:p-5 rounded-2xl bg-white border border-slate-200/80 shadow-sm hover:shadow-xl hover:border-blue-200 transition-all duration-300 transform hover:-translate-y-1"
+            >
                 {(service.isTrendy || service.isSeasonal) && (
                   <div className="absolute -top-3 left-4 flex gap-2">
-                    {service.isTrendy && <span className="bg-gradient-to-r from-rose-500 to-pink-500 text-white text-[10px] font-bold px-2 py-1 rounded-full shadow-sm">Trendy</span>}
-                    {service.isSeasonal && <span className="bg-gradient-to-r from-amber-400 to-orange-500 text-white text-[10px] font-bold px-2 py-1 rounded-full shadow-sm">Seasonal</span>}
+                    {service.isTrendy && <span className="bg-linear-to-r from-rose-500 to-pink-500 text-white text-[10px] font-bold px-2 py-1 rounded-full shadow-sm">Trendy</span>}
+                    {service.isSeasonal && <span className="bg-linear-to-r from-amber-400 to-orange-500 text-white text-[10px] font-bold px-2 py-1 rounded-full shadow-sm">Seasonal</span>}
                   </div>
                 )}
                 
@@ -75,7 +62,7 @@ export default function ServicesSection() {
                   <Link to={`/service/${service.slug}`} className="hover:underline">{service.title}</Link>
                 </h4>
                 
-                <p className="text-slate-500 font-medium text-xs sm:text-sm leading-relaxed mb-4 flex-grow">
+                <p className="text-slate-500 font-medium text-xs sm:text-sm leading-relaxed mb-4 grow">
                   {service.description}
                 </p>
                 
@@ -103,9 +90,8 @@ export default function ServicesSection() {
                   </Link>
                 </div>
               </div>
-            ))}
-          </div>
-        )}
+          ))}
+        </div>
       </div>
     </section>
   );
