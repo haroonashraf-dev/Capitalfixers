@@ -84,7 +84,7 @@ export const processSteps = [
 ];
 
 export const areasServed = [
-  "Islamabad", "Rawalpindi", "G-11" ,"Faisal Town", "DHA Islamabad"
+  "Islamabad","Faisal Town", "DHA Islamabad", "Gulberg","Behria Town"
 ];
 
 export const testimonials = [
