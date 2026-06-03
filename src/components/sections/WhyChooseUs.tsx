@@ -33,16 +33,16 @@ export default function WhyChooseUs() {
             {/* Visual Grid */}
             <div className="grid grid-cols-2 gap-4 sm:gap-6 relative z-10 w-full lg:w-11/12">
               <img 
-                src="https://images.pexels.com/photos/8293699/pexels-photo-8293699.jpeg" 
+                src="https://images.pexels.com/photos/8293699/pexels-photo-8293699.jpeg?auto=compress&cs=tinysrgb&w=600" 
                 alt="AC Repairing" 
                 loading="lazy"
-                className="w-full h-[240px] sm:h-[320px] object-cover rounded-3xl shadow-lg translate-y-8"
+                className="w-full h-60 sm:h-80 object-cover rounded-3xl shadow-lg translate-y-8"
               />
               <img 
-                src="https://images.pexels.com/photos/33694019/pexels-photo-33694019.jpeg" 
+                src="https://images.pexels.com/photos/33694019/pexels-photo-33694019.jpeg?auto=compress&cs=tinysrgb&w=600" 
                 alt="Electrician Fixing" 
                 loading="lazy"
-                className="w-full h-[240px] sm:h-[320px] object-cover rounded-3xl shadow-xl"
+                className="w-full h-60 sm:h-80 object-cover rounded-3xl shadow-xl"
               />
             </div>
             
@@ -53,7 +53,7 @@ export default function WhyChooseUs() {
             </div>
             
             {/* Background Blob */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full max-w-[400px] rounded-full z-0 pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(219,234,254,0.6) 0%, rgba(219,234,254,0) 70%)', transform: 'translateZ(0)' }} />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full max-w-100 rounded-full z-0 pointer-events-none" style={{ background: 'radial-gradient(circle, rgba(219,234,254,0.6) 0%, rgba(219,234,254,0) 70%)', transform: 'translateZ(0)' }} />
           </div>
 
           <div className="order-1 lg:order-2">

@@ -80,7 +80,12 @@ export default function Hero() {
             <div className="relative z-10 w-full aspect-3/4 sm:aspect-4/3 lg:aspect-4/3 rounded-l-2xl sm:rounded-l-[2.5rem] rounded-r-none overflow-hidden shadow-2xl border-2 sm:border-4 border-r-0 border-white -mr-4 sm:-mr-6 lg:-mr-8">
               <div className="absolute inset-0 bg-slate-900/10 z-10"></div>
               <img 
-                src="https://media.istockphoto.com/id/1278554684/photo/the-air-conditioner-master-in-a-medical-protective-face-mask-checks-and-refills-the-air.jpg?s=1024x1024&w=is&k=20&c=R9tHNCAepunLi9nD4t9VLgfpfYcQ7PYVJJPBw2Hox9E=" 
+                src="https://media.istockphoto.com/id/1278554684/photo/the-air-conditioner-master-in-a-medical-protective-face-mask-checks-and-refills-the-air.jpg?s=612x612&w=is&k=20&c=R9tHNCAepunLi9nD4t9VLgfpfYcQ7PYVJJPBw2Hox9E=" 
+                srcSet="
+                  https://media.istockphoto.com/id/1278554684/photo/the-air-conditioner-master-in-a-medical-protective-face-mask-checks-and-refills-the-air.jpg?s=612x612&w=is&k=20&c=R9tHNCAepunLi9nD4t9VLgfpfYcQ7PYVJJPBw2Hox9E= 612w,
+                  https://media.istockphoto.com/id/1278554684/photo/the-air-conditioner-master-in-a-medical-protective-face-mask-checks-and-refills-the-air.jpg?s=1024x1024&w=is&k=20&c=R9tHNCAepunLi9nD4t9VLgfpfYcQ7PYVJJPBw2Hox9E= 1024w
+                "
+                sizes="(max-width: 640px) 612px, 1024px"
                 alt="Professional technician fixing an AC unit" 
                 fetchPriority="high"
                 decoding="async"
