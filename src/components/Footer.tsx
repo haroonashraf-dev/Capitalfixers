@@ -13,7 +13,7 @@ export default function Footer() {
           <div className="space-y-4">
             <div className="flex items-center gap-2">
               <Logo className="w-10 h-10 shrink-0 border border-slate-700" />
-              <h3 className="text-white font-bold text-xl tracking-tight">Capitalfixers</h3>
+              <h3 className="text-white font-extrabold text-2xl tracking-tight">Capital<span className="text-blue-500">fixers</span></h3>
             </div>
             <p className="text-sm leading-relaxed text-slate-400 max-w-xs">
               Professional home maintenance, AC repair, plumbing, and cleaning services across Islamabad and Rawalpindi. Trusted by homeowners and businesses.
@@ -89,9 +89,9 @@ export default function Footer() {
         {/* Developer Credit / Promo */}
         <div className="mt-8 pt-6 border-t border-slate-800/50 flex flex-col items-center justify-center text-center">
           <p className="text-xs text-slate-500 flex items-center gap-2">
-            <span>Need a professional website for your business?</span>
+            <span>Help Business Grow Online??</span>
             <a 
-              href="https://haroondev.vercel.app/" 
+              href="https://wa.me/923214576734?text=Hello!%20I%20saw%20the%20Capitalfixers%20website%20and%20I'm%20interested%20in%20getting%20a%20professional%20website%20built%20for%20my%20business.%20Could%20we%20discuss%20the%20details?" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="text-blue-400 hover:text-blue-300 font-medium transition-colors inline-flex items-center gap-1"
