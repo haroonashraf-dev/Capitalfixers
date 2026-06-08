@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import Logo from './Logo';
 import Navbar from './Navbar';
 import Footer from './Footer';
+import LikeThisWebsite from './LikeThisWebsite';
 import FloatingWhatsApp from './FloatingWhatsApp';
 
 
@@ -147,6 +148,7 @@ export default function Layout() {
       <main className="flex-grow pt-[72px]">
         <Outlet />
       </main>
+      <LikeThisWebsite />
       <Footer />
       <FloatingWhatsApp />
     </div>
