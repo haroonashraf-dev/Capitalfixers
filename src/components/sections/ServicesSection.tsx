@@ -1,10 +1,12 @@
 import { Link } from 'react-router-dom';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { Plus, Star } from 'lucide-react';
 import { defaultServices } from '../../data/defaultServices';
+import { services as categoryData } from '../../data/content';
 import { ServiceItem } from '../../pages/Admin';
 
 export default function ServicesSection({ showHomeOnly = false }: { showHomeOnly?: boolean }) {
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [servicesList, setServicesList] = useState<ServiceItem[]>(() => {
     const stored = localStorage.getItem('local_services');
     if (stored) {
@@ -21,41 +23,78 @@ export default function ServicesSection({ showHomeOnly = false }: { showHomeOnly
     return defaultServices;
   });
 
+  // Extract unique categories from the current list
+  const availableCategories = useMemo(() => {
+    return categoryData.map(c => ({
+      id: c.slug,
+      name: c.title
+    }));
+  }, []);
+
   // Sort: Trendy or Seasonal on top
-  const sortedServices = [...servicesList]
-    .filter(service => {
-      if (showHomeOnly) {
-        return service.showOnHome !== false;
-      }
-      return true;
-    })
-    .sort((a, b) => {
-      const aPriority = a.isTrendy || a.isSeasonal ? 1 : 0;
-      const bPriority = b.isTrendy || b.isSeasonal ? 1 : 0;
-      return bPriority - aPriority;
-    });
+  const sortedServices = useMemo(() => {
+    return [...servicesList]
+      .filter(service => {
+        if (showHomeOnly && service.showOnHome === false) return false;
+        if (selectedCategory !== 'all' && service.categoryId !== selectedCategory) return false;
+        return true;
+      })
+      .sort((a, b) => {
+        const aPriority = a.isTrendy || a.isSeasonal ? 1 : 0;
+        const bPriority = b.isTrendy || b.isSeasonal ? 1 : 0;
+        return bPriority - aPriority;
+      });
+  }, [servicesList, showHomeOnly, selectedCategory]);
 
   return (
-    <section className="py-4 lg:py-6 bg-slate-50 relative overflow-hidden">
+    <section className="py-2 lg:py-4 bg-slate-50 relative overflow-hidden">
       {/* Minimal background elements */}
       <div 
-        className="absolute top-0 left-1/2 -translate-x-1/2 w-250 h-125 rounded-full opacity-50 pointer-events-none"
+        className="absolute top-0 left-1/2 -translate-x-1/2 w-[250px] h-[125px] rounded-full opacity-50 pointer-events-none"
         style={{
           background: 'radial-gradient(circle, rgba(219,234,254,0.7) 0%, rgba(219,234,254,0) 70%)',
           transform: 'translateZ(0)'
         }}
       />
       
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full max-w-350">
-        <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-4">
-          
-  
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full max-w-7xl">
+        <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10">
+          <div className="flex flex-wrap justify-center gap-2 mb-6">
+            <button
+              onClick={() => setSelectedCategory('all')}
+              className={`px-4 py-2 rounded-full text-sm font-semibold transition-colors ${
+                selectedCategory === 'all' 
+                  ? 'bg-blue-600 text-white shadow-md' 
+                  : 'bg-white text-slate-600 hover:bg-blue-50 border border-slate-200'
+              }`}
+            >
+              All Services
+            </button>
+            {availableCategories.map(cat => (
+              <button
+                key={cat.id}
+                onClick={() => setSelectedCategory(cat.id)}
+                className={`px-4 py-2 rounded-full text-sm font-semibold transition-colors capitalize ${
+                  selectedCategory === cat.id 
+                    ? 'bg-blue-600 text-white shadow-md' 
+                    : 'bg-white text-slate-600 hover:bg-blue-50 border border-slate-200'
+                }`}
+              >
+                {cat.name}
+              </button>
+            ))}
+          </div>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
-          {sortedServices.map((service) => (
-            <div 
-              key={service.id}
+          {sortedServices.length === 0 ? (
+            <div className="col-span-full text-center py-10">
+              <p className="text-slate-500 font-medium">No services currently available in this category.</p>
+            </div>
+          ) : (
+            sortedServices.map((service) => (
+              <div 
+                key={service.id}
               className="group relative flex flex-col p-4 sm:p-5 rounded-2xl bg-white border border-slate-200/80 shadow-sm hover:shadow-xl hover:border-blue-200 transition-all duration-300 transform hover:-translate-y-1"
             >
                 {(service.isTrendy || service.isSeasonal) && (
@@ -97,7 +136,8 @@ export default function ServicesSection({ showHomeOnly = false }: { showHomeOnly
                   </Link>
                 </div>
               </div>
-          ))}
+            ))
+          )}
         </div>
       </div>
     </section>

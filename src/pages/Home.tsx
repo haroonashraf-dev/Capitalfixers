@@ -1,6 +1,6 @@
 import React from 'react';
 import Hero from '../components/sections/Hero';
-import ServicesSection from '../components/sections/ServicesSection';
+import CategoriesSection from '../components/sections/CategoriesSection';
 import WhyChooseUs from '../components/sections/WhyChooseUs';
 import ProcessSection from '../components/sections/ProcessSection';
 import AreasSection from '../components/sections/AreasSection';
@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <ServicesSection showHomeOnly={true} />
+      <CategoriesSection />
       <WhyChooseUs />
       <ProcessSection />
       <AreasSection />
