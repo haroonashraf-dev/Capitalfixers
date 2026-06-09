@@ -5,7 +5,7 @@ export const services = [
     description: "Expert diagnostics and quick AC repairs to restore cooling. We fix leaks, do general maintenance, and deep cleaning.",
     icon: "ThermometerSnowflake",
     slug: "ac-repair-and-service",
-    features: ["AC General Service", "AC Installation", "AC Repairing", "AC Mounting and Dismounting", "AC Dismounting", "AC Mounting and Dismounting + AC General Service"]
+    features: [ "AC General Service", "AC Installation", "AC Repairing", "AC Mounting and Dismounting", "AC Dismounting", "AC Mounting and Dismounting + AC General Service"]
   },
   {
     id: "plumbing",
@@ -32,21 +32,13 @@ export const services = [
     slug: "cleaning",
     features: ["Steam Cleaning", "Stain & Spot Treatment", "Quick Drying", "Dust Mite Removal"]
   },
-  // {
-  //   id: "sofa-cleaning",
-  //   title: "Sofa Cleaning",
-  //   description: "Deep shampoo capabilities to remove tough stains, dust, and allergens from your sofas, restoring their shine.",
-  //   icon: "Sofa",
-  //   slug: "sofa-cleaning",
-  //   features: ["Deep Shampoo Wash", "Stain Removal", "Fabric Protection", "Odor Neutralization"]
-  // },
   {
-    id: "washing-machine",
-    title: "Automatic & Semi-Auto Washing Machine Repair",
-    description: "Expert repair of top-load, front-load automatic and semi-automatic washing machines of all major brands.",
+    id: "Carpenter",
+    title: "Carpentry Services ",
+    description: "Custom furniture making, repairs, and installations by skilled carpenters for your home or office.",
     icon: "MonitorPlay",
-    slug: "washing-machine-repair",
-    features: ["Motor Repair", "Drum Issues", "PCB Board Repair", "Drainage Solutions"]
+    slug: "carpenter-services",
+    features: ["Carpenter", "Doors", "Windows", "Furniture Repair", "Custom Woodwork"]
   },
   {
     id: "fridge-repair",
@@ -63,6 +55,13 @@ export const services = [
     icon: "Truck",
     slug: "home-shifting-services",
     features: ["Professional Packing", "Safe Transport", "Unpacking Assistance", "Trained Loaders"]
+  },
+  {
+    id: "Custom Services",
+    title: "Custom Services",
+    description: "Custom home maintenance and repair solutions tailored to your specific needs. Contact us for a quote.",
+    slug: "custom-services",
+    features: ["Custom Home Maintenance", "Specialized Repairs", "Tailored Solutions", "Contact for Quote"]
   }
 ];
 
