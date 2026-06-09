@@ -145,7 +145,7 @@ export default function Layout() {
       </Helmet>
       
       <Navbar />
-      <main className="flex-grow pt-[72px]">
+      <main className="grow pt-18">
         <Outlet />
       </main>
       <LikeThisWebsite />
