@@ -5,7 +5,7 @@ import { defaultServices } from '../../data/defaultServices';
 import { services as categoryData } from '../../data/content';
 import { ServiceItem } from '../../pages/Admin';
 
-export default function ServicesSection({ showHomeOnly = false }: { showHomeOnly?: boolean }) {
+export default function ServicesSection() {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [servicesList, setServicesList] = useState<ServiceItem[]>(() => {
     const stored = localStorage.getItem('local_services');
@@ -35,7 +35,6 @@ export default function ServicesSection({ showHomeOnly = false }: { showHomeOnly
   const sortedServices = useMemo(() => {
     return [...servicesList]
       .filter(service => {
-        if (showHomeOnly && service.showOnHome === false) return false;
         if (selectedCategory !== 'all' && service.categoryId !== selectedCategory) return false;
         return true;
       })
@@ -44,13 +43,13 @@ export default function ServicesSection({ showHomeOnly = false }: { showHomeOnly
         const bPriority = b.isTrendy || b.isSeasonal ? 1 : 0;
         return bPriority - aPriority;
       });
-  }, [servicesList, showHomeOnly, selectedCategory]);
+  }, [servicesList, selectedCategory]);
 
   return (
-    <section className="py-2 lg:py-4 bg-slate-50 relative overflow-hidden">
+    <section className="py-4 lg:py-4 bg-slate-50 relative overflow-hidden">
       {/* Minimal background elements */}
       <div 
-        className="absolute top-0 left-1/2 -translate-x-1/2 w-[250px] h-[125px] rounded-full opacity-50 pointer-events-none"
+        className="absolute top-0 left-1/2 -translate-x-1/2 w-62.5 h-31.25 rounded-full opacity-50 pointer-events-none"
         style={{
           background: 'radial-gradient(circle, rgba(219,234,254,0.7) 0%, rgba(219,234,254,0) 70%)',
           transform: 'translateZ(0)'

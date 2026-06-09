@@ -12,7 +12,6 @@ export interface ServiceItem {
   rating: number;
   isTrendy?: boolean;
   isSeasonal?: boolean;
-  showOnHome?: boolean;
   slug: string;
 }
 
@@ -351,7 +350,7 @@ export default function AdminServices() {
               <div className="relative flex items-center justify-center">
                 <input 
                   type="checkbox" 
-                  checked={formData.isSeasonal || false}
+                  checked={formData.isSeasonal || false} 
                   onChange={e => setFormData({...formData, isSeasonal: e.target.checked})}
                   className="w-5 h-5 border-2 border-slate-300 rounded text-blue-600 focus:ring-blue-600 focus:ring-offset-0 transition-all cursor-pointer"
                 />
@@ -359,20 +358,6 @@ export default function AdminServices() {
               <div className="flex flex-col">
                 <span className="text-sm font-bold text-slate-800 group-hover:text-amber-600 transition-colors">Mark as Seasonal</span>
                 <span className="text-xs text-slate-500">Highlights the service with a seasonal badge</span>
-              </div>
-            </label>
-            <label className="flex items-center gap-3 cursor-pointer group">
-              <div className="relative flex items-center justify-center">
-                <input 
-                  type="checkbox" 
-                  checked={formData.showOnHome !== false} 
-                  onChange={e => setFormData({...formData, showOnHome: e.target.checked})}
-                  className="w-5 h-5 border-2 border-slate-300 rounded text-green-600 focus:ring-green-600 focus:ring-offset-0 transition-all cursor-pointer"
-                />
-              </div>
-              <div className="flex flex-col">
-                <span className="text-sm font-bold text-slate-800 group-hover:text-green-600 transition-colors">Show on Homepage</span>
-                <span className="text-xs text-slate-500">Displays this service on the main homepage</span>
               </div>
             </label>
           </div>
@@ -390,7 +375,7 @@ export default function AdminServices() {
 
       <div className="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
         <div className="overflow-x-auto">
-          <table className="w-full text-left border-collapse min-w-150">
+          <table className="w-full text-left border-collapse min-w-[600px]">
             <thead>
               <tr className="bg-slate-50/80 border-b border-slate-200 text-xs text-slate-500 uppercase tracking-wider">
                 <th className="p-5 font-bold">Service Details</th>
