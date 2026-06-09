@@ -25,21 +25,21 @@ export const services = [
   },
   
   {
-    id: "carpet-cleaning",
-    title: "Carpet Cleaning",
+    id: "cleaning",
+    title: "Cleaning",
     description: "Industrial-grade machines for deep cleaning of carpets and rugs right at your doorstep.",
     icon: "Brush",
-    slug: "carpet-cleaning",
+    slug: "cleaning",
     features: ["Steam Cleaning", "Stain & Spot Treatment", "Quick Drying", "Dust Mite Removal"]
   },
-  {
-    id: "sofa-cleaning",
-    title: "Sofa Cleaning",
-    description: "Deep shampoo capabilities to remove tough stains, dust, and allergens from your sofas, restoring their shine.",
-    icon: "Sofa",
-    slug: "sofa-cleaning",
-    features: ["Deep Shampoo Wash", "Stain Removal", "Fabric Protection", "Odor Neutralization"]
-  },
+  // {
+  //   id: "sofa-cleaning",
+  //   title: "Sofa Cleaning",
+  //   description: "Deep shampoo capabilities to remove tough stains, dust, and allergens from your sofas, restoring their shine.",
+  //   icon: "Sofa",
+  //   slug: "sofa-cleaning",
+  //   features: ["Deep Shampoo Wash", "Stain Removal", "Fabric Protection", "Odor Neutralization"]
+  // },
   {
     id: "washing-machine",
     title: "Automatic & Semi-Auto Washing Machine Repair",
