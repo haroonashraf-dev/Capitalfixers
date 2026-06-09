@@ -34,9 +34,9 @@ export const services = [
   },
   {
     id: "Carpenter",
-    title: "Carpentry Services ",
+    title: "Carpenter Works ",
     description: "Custom furniture making, repairs, and installations by skilled carpenters for your home or office.",
-    icon: "MonitorPlay",
+    icon: "carpenter",
     slug: "carpenter-services",
     features: ["Carpenter", "Doors", "Windows", "Furniture Repair", "Custom Woodwork"]
   },
