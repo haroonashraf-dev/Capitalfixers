@@ -31,7 +31,7 @@ export default function CategoriesSection() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 max-w-7xl">
         <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
           <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-slate-900 mb-4">
-            Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-sky-500">Service Categories</span>
+            Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-sky-500">Service in Islamabad & Rawalpindi</span>
           </h2>
           <p className="text-base text-slate-600 font-medium">
             Explore our wide range of professional maintenance and repair services. Select a category to see all available options.
