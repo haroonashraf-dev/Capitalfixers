@@ -4,14 +4,16 @@ export const services = [
     title: "AC Repair & Service",
     description: "Expert diagnostics and quick AC repairs to restore cooling. We fix leaks, do general maintenance, and deep cleaning.",
     icon: "ThermometerSnowflake",
+    image: "/ac-repair.webp",
     slug: "ac-repair-and-service",
-    features: [ "AC General Service", "AC Installation", "AC Repairing", "AC Mounting and Dismounting", "AC Dismounting", "AC Mounting and Dismounting + AC General Service"]
+    features: ["AC General Service", "AC Installation", "AC Repairing", "AC Mounting and Dismounting", "AC Dismounting", "AC Mounting and Dismounting + AC General Service"]
   },
   {
     id: "plumbing",
     title: "Plumbing Services",
     description: "Professional plumbing solutions for leaks, pipe installations, water motor issues, and bathroom fittings.",
     icon: "Wrench",
+    image: "public/plumbing.webp",
     slug: "plumbing-services",
     features: ["Leak Repairs", "Pipe Installation", "Water Motor Repair", "Sanitary Fittings"]
   },
@@ -20,31 +22,43 @@ export const services = [
     title: "Electrician Services",
     description: "Reliable electrical troubleshooting, wiring, UPS installation, and general electrical repairs.",
     icon: "Zap",
+    image: "/media/electrician.jpg",
     slug: "electrician-services",
     features: ["Wiring & Rewiring", "UPS Installation", "Fault Finding", "Breaker Fixing"]
   },
-  
   {
-    id: "cleaning",
-    title: "Cleaning",
+    id: "sofa-cleaning",
+    title: "Sofa Cleaning",
+    description: "Deep shampoo capabilities to remove tough stains, dust, and allergens from your sofas, restoring their shine.",
+    icon: "Sofa",
+    image: "/media/sofa-cleaning.jpg",
+    slug: "sofa-cleaning",
+    features: ["Deep Shampoo Wash", "Stain Removal", "Fabric Protection", "Odor Neutralization"]
+  },
+  {
+    id: "carpet-cleaning",
+    title: "Carpet Cleaning",
     description: "Industrial-grade machines for deep cleaning of carpets and rugs right at your doorstep.",
     icon: "Brush",
-    slug: "cleaning",
+    image: "/media/carpet-cleaning.jpg",
+    slug: "carpet-cleaning",
     features: ["Steam Cleaning", "Stain & Spot Treatment", "Quick Drying", "Dust Mite Removal"]
   },
   {
-    id: "Carpenter",
-    title: "Carpenter Works ",
-    description: "Custom furniture making, repairs, and installations by skilled carpenters for your home or office.",
-    icon: "carpenter",
-    slug: "carpenter-services",
-    features: ["Carpenter", "Doors", "Windows", "Furniture Repair", "Custom Woodwork"]
+    id: "washing-machine",
+    title: "Automatic & Semi-Auto Washing Machine Repair",
+    description: "Expert repair of top-load, front-load automatic and semi-automatic washing machines of all major brands.",
+    icon: "MonitorPlay",
+    image: "/media/washing-machine.jpg",
+    slug: "washing-machine-repair",
+    features: ["Motor Repair", "Drum Issues", "PCB Board Repair", "Drainage Solutions"]
   },
   {
     id: "fridge-repair",
     title: "Fridge & Freezer Repair",
     description: "Fast repair for refrigerators and deep freezers. We fix cooling issues, gas recharges, and compressor change.",
     icon: "Refrigerator",
+    image: "/media/fridge-repair.jpg",
     slug: "fridge-and-freezer-repair",
     features: ["Gas Recharging", "Compressor Replacement", "Thermostat Fix", "Defrost Issues"]
   },
@@ -53,15 +67,9 @@ export const services = [
     title: "Home Shifting Services",
     description: "Hassle-free packing, moving, and unpacking services for safe relocation across the city.",
     icon: "Truck",
+    image: "/media/home-shifting.jpg",
     slug: "home-shifting-services",
     features: ["Professional Packing", "Safe Transport", "Unpacking Assistance", "Trained Loaders"]
-  },
-  {
-    id: "Custom Services",
-    title: "Custom Services",
-    description: "Custom home maintenance and repair solutions tailored to your specific needs. Contact us for a quote.",
-    slug: "custom-services",
-    features: ["Custom Home Maintenance", "Specialized Repairs", "Tailored Solutions", "Contact for Quote"]
   }
 ];
 
@@ -84,7 +92,7 @@ export const processSteps = [
 ];
 
 export const areasServed = [
-  "Islamabad","Faisal Town", "DHA Islamabad", "Gulberg","Behria Town"
+  "Islamabad", "Rawalpindi", "G-11" ,"Faisal Town", "DHA Islamabad"
 ];
 
 export const testimonials = [
