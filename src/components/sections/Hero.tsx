@@ -1,11 +1,11 @@
-import { ArrowRight, ShieldCheck, Star, Clock, UserCheck, CalendarCheck, PhoneCall } from 'lucide-react';
+import { ArrowRight, ShieldCheck, Star, Clock, UserCheck, CalendarCheck, PhoneCall, Banknote } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function Hero() {
   return (
     <section className="relative pt-4 sm:pt-12 pb-16 lg:pt-16 lg:pb-24 overflow-hidden bg-slate-50">
       {/* Background Decor */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#f1f5f9_1px,transparent_1px),linear-gradient(to_bottom,#f1f5f9_1px,transparent_1px)] bg-size[4rem_4rem] mask-[radial-gradient(ellipse_80%_60%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none"></div>
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#f1f5f9_1px,transparent_1px),linear-gradient(to_bottom,#f1f5f9_1px,transparent_1px)] bg-[size:4rem_4rem] mask-[radial-gradient(ellipse_80%_60%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none"></div>
       
       {/* Blur Orbs */}
       <div className="absolute top-0 right-0 w-125 h-125 bg-blue-200/30 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/3 pointer-events-none" style={{ transform: 'translateZ(0)' }} />
@@ -32,7 +32,8 @@ export default function Hero() {
             
             <div className="flex flex-row items-center justify-start gap-2 sm:gap-4 mb-6 sm:mb-12 w-full">
               <a 
-                href="tel:+923137386619" 
+                href="https://wa.me/923117430276?text=Hello!%20I%E2%80%99m%20looking%20for%20AC%20repair,%20electrician,%20or%20other%20home%20services.%20Please%20share%20details."
+      target="_blank" 
                 className="order-2 sm:order-1 flex-1 sm:flex-none px-2 py-2.5 sm:px-8 sm:py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl sm:rounded-2xl transition-all flex items-center justify-center gap-1 sm:gap-2 shadow-xl shadow-blue-600/20 hover:-translate-y-1 active:translate-y-0 text-xs sm:text-base whitespace-nowrap"
               >
                 <PhoneCall className="w-3.5 h-3.5 sm:w-5 sm:h-5 hidden sm:block" /> Call Now
@@ -113,6 +114,19 @@ export default function Hero() {
                 <div className="text-[6px] sm:text-xs text-slate-400 font-bold mb-0.5">Technician arriving in</div>
                 <div className="text-[10px] sm:text-sm font-extrabold text-slate-900 flex items-center gap-1 sm:gap-1.5">
                   <Clock className="w-2.5 h-2.5 sm:w-4 sm:h-4 text-blue-600" /> 45 Mins
+                </div>
+              </div>
+            </div>
+
+            {/* Floating UI Card - Visit Charges */}
+            <div className="absolute top-[30%] sm:top-34 -left-4 sm:-left-8 lg:-left-10 bg-white p-2 sm:p-4 rounded-lg sm:rounded-2xl shadow-xl border border-slate-100 z-30 flex items-center gap-2 sm:gap-4 animate-in fade-in slide-in-from-bottom-8 duration-700 delay-500">
+              <div className="w-8 h-8 sm:w-12 sm:h-12 rounded-full overflow-hidden border-2 border-slate-100 bg-green-50 flex items-center justify-center">
+                <Banknote className="w-4 h-4 sm:w-6 sm:h-6 text-green-600" />
+              </div>
+              <div>
+                <div className="text-[6px] sm:text-xs text-slate-400 font-bold mb-0.5">Visit Charges</div>
+                <div className="text-[10px] sm:text-sm font-extrabold text-slate-900 flex items-center gap-1 sm:gap-1.5">
+                   Rs.600 Only
                 </div>
               </div>
             </div>

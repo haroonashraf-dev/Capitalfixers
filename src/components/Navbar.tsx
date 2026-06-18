@@ -135,7 +135,9 @@ export default function Navbar() {
           {/* Call to action & Mobile Toggle */}
           <div className="flex items-center gap-4">
             <a 
-              href="tel:+923117430276" 
+              href="https://wa.me/923117430276?text=Hello!%20I%E2%80%99m%20looking%20for%20AC%20repair,%20electrician,%20or%20other%20home%20services.%20Please%20share%20details."
+              target="_blank"
+              rel="noreferrer"
               className={`hidden md:flex items-center gap-2.5 px-4 py-2 rounded-full border transition-all duration-300 ${isScrolled ? 'bg-blue-50 text-blue-700 border-transparent' : 'bg-white text-slate-700 hover:text-blue-600 border-slate-200 shadow-sm'}`}
             >
               <div className="w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
@@ -193,7 +195,8 @@ export default function Navbar() {
           <div className="h-px bg-slate-100 my-6"></div>
           
           <div className="flex flex-col gap-3 mt-auto pb-8">
-            <a href="tel:+923117430276" className="w-full flex items-center justify-center gap-2 py-4 rounded-xl bg-slate-100/80 text-slate-800 hover:bg-slate-200 font-bold text-base transition-colors">
+            <a href="https://wa.me/923117430276?text=Hello!%20I%E2%80%99m%20looking%20for%20AC%20repair,%20electrician,%20or%20other%20home%20services.%20Please%20share%20details."
+      target="_blank" >
               <Phone className="w-5 h-5" /> Call Us Now
             </a>
             <a href="https://wa.me/923117430276" target="_blank" rel="noreferrer" className="w-full flex items-center justify-center gap-2 py-4 rounded-xl bg-[#25D366] text-white font-bold text-base shadow-lg shadow-green-500/20 active:scale-95 transition-all">
