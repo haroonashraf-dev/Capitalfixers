@@ -135,7 +135,7 @@ export default function Navbar() {
           {/* Call to action & Mobile Toggle */}
           <div className="flex items-center gap-4">
             <a 
-              href="tel:+923137386619" 
+              href="tel:+923117430276" 
               className={`hidden md:flex items-center gap-2.5 px-4 py-2 rounded-full border transition-all duration-300 ${isScrolled ? 'bg-blue-50 text-blue-700 border-transparent' : 'bg-white text-slate-700 hover:text-blue-600 border-slate-200 shadow-sm'}`}
             >
               <div className="w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
