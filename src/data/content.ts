@@ -26,7 +26,15 @@ image: "\electrician.jpg",
     slug: "electrician-services",
     features: ["Wiring & Rewiring", "UPS Installation", "Fault Finding", "Breaker Fixing"]
   },
-  
+  {
+    id : "CCTV Installation",
+    title: "CCTV Installation",
+    description: "Professional CCTV installation for home and business security. We set up cameras, DVRs, and remote monitoring.",
+    icon: "MonitorPlay",
+    image: "\cctv.jpg",
+    slug: "cctv-installation",
+    features: ["Camera Installation", "DVR Setup", "Remote Monitoring", "System Maintenance"]
+  },
   {
     id: "cleaning",
     title: "Cleaning",
