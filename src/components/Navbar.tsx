@@ -141,7 +141,7 @@ export default function Navbar() {
               <div className="w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
                 <Phone className="w-3.5 h-3.5" />
               </div>
-              <span className="font-bold text-sm tracking-wide">+92 313 7386619</span>
+              <span className="font-bold text-sm tracking-wide">+92 3117430276</span>
             </a>
 
             {/* Mobile Menu Toggle */}
@@ -193,10 +193,10 @@ export default function Navbar() {
           <div className="h-px bg-slate-100 my-6"></div>
           
           <div className="flex flex-col gap-3 mt-auto pb-8">
-            <a href="tel:+923137386619" className="w-full flex items-center justify-center gap-2 py-4 rounded-xl bg-slate-100/80 text-slate-800 hover:bg-slate-200 font-bold text-base transition-colors">
+            <a href="tel:+923117430276" className="w-full flex items-center justify-center gap-2 py-4 rounded-xl bg-slate-100/80 text-slate-800 hover:bg-slate-200 font-bold text-base transition-colors">
               <Phone className="w-5 h-5" /> Call Us Now
             </a>
-            <a href="https://wa.me/923137386619" target="_blank" rel="noreferrer" className="w-full flex items-center justify-center gap-2 py-4 rounded-xl bg-[#25D366] text-white font-bold text-base shadow-lg shadow-green-500/20 active:scale-95 transition-all">
+            <a href="https://wa.me/923117430276" target="_blank" rel="noreferrer" className="w-full flex items-center justify-center gap-2 py-4 rounded-xl bg-[#25D366] text-white font-bold text-base shadow-lg shadow-green-500/20 active:scale-95 transition-all">
               <MessageCircle className="w-5 h-5" /> Chat on WhatsApp
             </a>
           </div>
