@@ -26,7 +26,7 @@ export default function ContactSection() {
     }
 
     const message = `Hello, I'd like to request a service callback.%0A%0A*Name:* ${formData.name}%0A*Phone:* ${formData.phone}%0A*Address:* ${formData.address}%0A*Service:* ${formData.service}%0A*Details:* ${formData.message || 'N/A'}`;
-    const whatsappUrl = `https://wa.me/923137386619?text=${message}`;
+    const whatsappUrl = `https://wa.me/923117430276?text=${message}`;
     
     window.open(whatsappUrl, '_blank');
   };
@@ -43,7 +43,7 @@ export default function ContactSection() {
           
           {/* Information */}
           <div className="lg:col-span-2 space-y-6 lg:pr-8">
-            <a href="https://wa.me/923137386619" target="_blank" rel="noreferrer" className="flex items-center gap-5 p-6 rounded-3xl border border-slate-200/60 bg-white hover:border-green-300 hover:bg-green-50 shadow-sm hover:shadow-md transition-all group">
+            <a href="https://wa.me/923117430276" target="_blank" rel="noreferrer" className="flex items-center gap-5 p-6 rounded-3xl border border-slate-200/60 bg-white hover:border-green-300 hover:bg-green-50 shadow-sm hover:shadow-md transition-all group">
               <div className="w-14 h-14 bg-green-100 rounded-2xl flex items-center justify-center text-green-600 shrink-0 group-hover:scale-110 transition-transform">
                 <MessageCircle className="w-7 h-7" />
               </div>
@@ -53,7 +53,7 @@ export default function ContactSection() {
               </div>
             </a>
 
-            <a href="tel:+923137386619" className="flex items-center gap-5 p-6 rounded-3xl border border-slate-200/60 bg-white hover:border-blue-300 hover:bg-blue-50 shadow-sm hover:shadow-md transition-all group">
+            <a href="tel:+923117430276" className="flex items-center gap-5 p-6 rounded-3xl border border-slate-200/60 bg-white hover:border-blue-300 hover:bg-blue-50 shadow-sm hover:shadow-md transition-all group">
               <div className="w-14 h-14 bg-blue-100 rounded-2xl flex items-center justify-center text-blue-600 shrink-0 group-hover:scale-110 transition-transform">
                 <Phone className="w-7 h-7" />
               </div>
