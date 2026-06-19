@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
  
 export default function Hero() {
   return (
-    <section className="relative pt-6 sm:pt-8 pb-12 sm:pb-16 lg:pt-4 lg:pb-24 overflow-hidden bg-slate-50">
+    <section className="relative pt-3 sm:pt-8 pb-6 sm:pb-16 lg:pt-4 lg:pb-24 overflow-hidden bg-slate-50">
       {/* Background Decor */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#f1f5f9_1px,transparent_1px),linear-gradient(to_bottom,#f1f5f9_1px,transparent_1px)] bg-[size:4rem_4rem] mask-[radial-gradient(ellipse_80%_60%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none"></div>
  
@@ -27,28 +27,28 @@ export default function Hero() {
       />
  
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full max-w-350">
-        <div className="flex flex-col md:flex-row items-center md:items-start justify-between w-full gap-8 md:gap-4">
+        <div className="flex flex-col md:flex-row items-center md:items-start justify-between w-full gap-2 sm:gap-8 md:gap-4">
           {/* Left Content */}
-          <div className="w-full md:w-1/2 md:pr-8 text-center md:text-left py-2 sm:py-8 lg:py-12 order-2 md:order-1">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-slate-200 text-slate-700 text-xs sm:text-sm font-bold mb-4 sm:mb-8 shadow-sm">
+          <div className="w-full md:w-1/2 md:pr-8 text-center md:text-left py-1 sm:py-8 lg:py-12 order-2 md:order-1">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-slate-200 text-slate-700 text-xs sm:text-sm font-bold mb-2 sm:mb-8 shadow-sm">
               <span className="flex h-2 w-2 rounded-full bg-blue-600 animate-pulse"></span>
               Serving Islamabad & Regional Areas
             </div>
  
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-extrabold text-slate-900 tracking-tight leading-[1.1] mb-4 sm:mb-6">
+            <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-7xl font-extrabold text-slate-900 tracking-tight leading-[1.1] mb-2 sm:mb-6">
               Home repairs, <br />
               <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-700 to-sky-500">
                 done right.
               </span>
             </h1>
  
-            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-slate-600 font-medium mb-6 sm:mb-10 leading-relaxed max-w-xl mx-auto md:mx-0">
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-slate-600 font-medium mb-4 sm:mb-10 leading-relaxed max-w-xl mx-auto md:mx-0">
               Top-rated experts for AC repair, plumbing, and electrical work. We
               provide upfront pricing, fast response times, and a 100%
               satisfaction guarantee.
             </p>
  
-            <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-3 sm:gap-4 mb-8 sm:mb-12 w-full">
+            <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-2.5 sm:gap-4 mb-4 sm:mb-12 w-full">
               <a
                 href="https://wa.me/923117430276?text=Hello!%20I%E2%80%99m%20looking%20for%20AC%20repair,%20electrician,%20or%20other%20home%20services.%20Please%20share%20details."
                 target="_blank"
@@ -62,10 +62,16 @@ export default function Hero() {
               >
                 Services <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-slate-400" />
               </Link>
+              <Link
+                to="/blog"
+                className="w-full sm:w-auto px-6 py-3.5 sm:px-8 sm:py-4 bg-white text-slate-700 border border-slate-200 font-bold rounded-2xl hover:border-blue-200 hover:bg-slate-50 transition-all flex items-center justify-center gap-2 hover:-translate-y-1 active:translate-y-0 shadow-sm text-sm sm:text-base whitespace-nowrap"
+              >
+                Latest Posts <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-slate-400" />
+              </Link>
             </div>
  
             {/* Social Proof */}
-            <div className="flex flex-row items-center justify-center md:justify-start gap-4 sm:gap-6 border-t border-slate-200/60 pt-5 sm:pt-8 mt-2 sm:mt-8">
+            <div className="flex flex-row items-center justify-center md:justify-start gap-4 sm:gap-6 border-t border-slate-200/60 pt-3 sm:pt-8 mt-1 sm:mt-8">
               <div className="flex items-center gap-2 sm:gap-3">
                 <div className="flex flex-col text-left">
                   <div className="flex text-yellow-500 mb-0.5">
@@ -97,9 +103,9 @@ export default function Hero() {
           </div>
  
           {/* Right Image Composition */}
-          <div className="w-full md:w-1/2 relative order-1 md:order-2 px-6 sm:px-10 md:px-0 pt-0 lg:pt-4">
+          <div className="w-full md:w-1/2 relative order-1 md:order-2 px-0 sm:px-6 md:px-0 pt-0 lg:pt-4">
             {/* Main Image Container */}
-            <div className="relative z-10 w-full h-[260px] xs:h-[300px] sm:h-[400px] md:h-[460px] lg:h-[600px] rounded-2xl sm:rounded-[2.5rem] md:rounded-l-[2.5rem] md:rounded-r-none overflow-hidden shadow-2xl border-4 border-white md:border-r-0 md:-mr-4 lg:-mr-8">
+            <div className="relative z-10 w-full h-[380px] xs:h-[420px] sm:h-[460px] md:h-[500px] lg:h-[600px] rounded-2xl sm:rounded-[2.5rem] md:rounded-l-[2.5rem] md:rounded-r-none overflow-hidden shadow-2xl border-2 sm:border-4 border-white md:border-r-0 md:-mr-4 lg:-mr-8">
               <div className="absolute inset-0 bg-slate-900/10 z-10"></div>
               <img
                 src="/homepage-image.png"

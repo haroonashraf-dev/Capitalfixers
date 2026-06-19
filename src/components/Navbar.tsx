@@ -130,6 +130,14 @@ export default function Navbar() {
             >
               Contact
             </Link>
+             <Link
+              to="/#"
+              className={`text-sm font-semibold transition-colors ${
+                location.pathname === '/#' ? 'text-blue-600' : 'text-slate-600 hover:text-blue-600'
+              }`}
+            >
+              Posts
+            </Link>
           </nav>
 
           {/* Call to action & Mobile Toggle */}
