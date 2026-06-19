@@ -173,10 +173,10 @@ export default function ServiceDetail() {
               <p className="text-sm font-semibold text-slate-500 mb-6">Our technicians are ready to deploy to your location.</p>
               
               <div className="space-y-3">
-                <a href={`https://wa.me/923137386619?text=Hello,%20I'm%20interested%20in%20the%20${encodeURIComponent(service.title)}%20service.`} target="_blank" rel="noreferrer" className="w-full bg-[#25D366] text-white font-bold py-3 px-4 rounded-xl flex items-center justify-center gap-2 hover:bg-[#20bd5a] transition-colors shadow-lg shadow-green-500/20">
+                <a href={`https://wa.me/923117430276?text=Hello,%20I'm%20interested%20in%20the%20${encodeURIComponent(service.title)}%20service.`} target="_blank" rel="noreferrer" className="w-full bg-[#25D366] text-white font-bold py-3 px-4 rounded-xl flex items-center justify-center gap-2 hover:bg-[#20bd5a] transition-colors shadow-lg shadow-green-500/20">
                   Book via WhatsApp
                 </a>
-                <a href="tel:+923137386619" className="w-full bg-blue-50 text-blue-700 hover:bg-blue-100 font-bold py-3 px-4 rounded-xl flex items-center justify-center gap-2 transition-colors">
+                <a href="tel:+923117430276" className="w-full bg-blue-50 text-blue-700 hover:bg-blue-100 font-bold py-3 px-4 rounded-xl flex items-center justify-center gap-2 transition-colors">
                   Call Now
                 </a>
               </div>
