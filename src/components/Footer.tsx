@@ -64,7 +64,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-3 text-sm">
                 <Phone className="w-5 h-5 text-primary shrink-0" />
-                <a href="tel:+923137386619" className="hover:text-white pb-0">+92 313 7386619</a>
+                <a href="tel:+923117430276" className="hover:text-white pb-0">+92 311 7430276</a>
               </li>
               <li className="flex items-center gap-3 text-sm">
                 <Mail className="w-5 h-5 text-primary shrink-0" />
@@ -87,7 +87,7 @@ export default function Footer() {
         </div>
 
         {/* Developer Credit / Promo */}
-        <div className="mt-8 pt-6 border-t border-slate-800/50 flex flex-col items-center justify-center text-center">
+        {/* <div className="mt-8 pt-6 border-t border-slate-800/50 flex flex-col items-center justify-center text-center">
           <p className="text-xs text-slate-500 flex items-center gap-2">
             <span>Help Business Grow Online??</span>
             <a 
@@ -99,7 +99,7 @@ export default function Footer() {
               Hire the Developer &rarr;
             </a>
           </p>
-        </div>
+        </div> */}
       </div>
     </footer>
   );

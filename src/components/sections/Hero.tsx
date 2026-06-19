@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 
 export default function Hero() {
   return (
-    <section className="relative pt-4 sm:pt-12 pb-16 lg:pt-16 lg:pb-24 overflow-hidden bg-slate-50">
+    <section className="relative pt-2 sm:pt-6 pb-16 lg:pt-4 lg:pb-24 overflow-hidden bg-slate-50">
       {/* Background Decor */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#f1f5f9_1px,transparent_1px),linear-gradient(to_bottom,#f1f5f9_1px,transparent_1px)] bg-[size:4rem_4rem] mask-[radial-gradient(ellipse_80%_60%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none"></div>
 
@@ -102,32 +102,22 @@ export default function Hero() {
           {/* Right Image Composition */}
           <div className="w-[45%] md:w-1/2 relative mt-12 sm:mt-16 md:mt-0 pt-0 lg:pt-4 translate-y-1">
             {/* Main Image Container */}
-            <div className="relative z-10 w-full aspect-3/4 sm:aspect-4/3 lg:aspect-4/3 rounded-l-2xl sm:rounded-l-[2.5rem] rounded-r-none overflow-hidden shadow-2xl border-2 sm:border-4 border-r-0 border-white -mr-4 sm:-mr-6 lg:-mr-8">
+           <div className="relative z-10 w-full h-[450px] sm:h-[350px] lg:h-[500px] rounded-l-2xl sm:rounded-l-[2.5rem] rounded-r-none overflow-hidden shadow-2xl border-2 sm:border-4 border-r-0 border-white -mr-4 sm:-mr-6 lg:-mr-8">
+            {/* <div className="relative z-10 w-full aspect-3/4 sm:aspect-4/3 lg:aspect-4/3 rounded-l-2xl sm:rounded-l-[2.5rem] rounded-r-none overflow-hidden shadow-2xl border-2 sm:border-4 border-r-0 border-white -mr-4 sm:-mr-6 lg:-mr-8"> */}
               <div className="absolute inset-0 bg-slate-900/10 z-10"></div>
               <img
-                src="https://media.istockphoto.com/id/1278554684/photo/the-air-conditioner-master-in-a-medical-protective-face-mask-checks-and-refills-the-air.jpg?s=612x612&w=is&k=20&c=R9tHNCAepunLi9nD4t9VLgfpfYcQ7PYVJJPBw2Hox9E="
-                srcSet="
-                  https://media.istockphoto.com/id/1278554684/photo/the-air-conditioner-master-in-a-medical-protective-face-mask-checks-and-refills-the-air.jpg?s=612x612&w=is&k=20&c=R9tHNCAepunLi9nD4t9VLgfpfYcQ7PYVJJPBw2Hox9E= 612w,
-                  https://media.istockphoto.com/id/1278554684/photo/the-air-conditioner-master-in-a-medical-protective-face-mask-checks-and-refills-the-air.jpg?s=1024x1024&w=is&k=20&c=R9tHNCAepunLi9nD4t9VLgfpfYcQ7PYVJJPBw2Hox9E= 1024w
-                "
+                src="public\homepage with my face.png"
                 sizes="(max-width: 640px) 612px, 1024px"
                 alt="Professional technician fixing an AC unit"
                 fetchPriority="high"
                 decoding="async"
+                style={{ objectPosition: "center 10%" }}
                 className="w-full h-full object-cover scale-105 hover:scale-110 transition-transform duration-700 ease-in-out"
               />
 
               {/* Gradient overlay for better text contrast */}
               <div className="absolute inset-0 bg-linear-to-t from-slate-900/70 via-slate-900/20 to-transparent z-10"></div>
 
-              <div className="absolute bottom-3 left-3 sm:bottom-6 sm:left-6 z-20">
-                <h3 className="text-white font-bold text-xs sm:text-xl md:text-2xl mb-0.5 sm:mb-2">
-                  Expert AC Repair
-                </h3>
-                <p className="text-slate-200 font-medium text-[8px] sm:text-xs md:text-sm max-w-[80%]">
-                  Same-day service available in your area.
-                </p>
-              </div>
             </div>
 
             {/* Floating UI Card - Technician status */}
