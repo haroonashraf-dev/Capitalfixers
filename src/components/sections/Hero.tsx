@@ -102,7 +102,7 @@ export default function Hero() {
           {/* Right Image Composition */}
           <div className="w-[45%] md:w-1/2 relative mt-12 sm:mt-16 md:mt-0 pt-0 lg:pt-4 translate-y-1">
             {/* Main Image Container */}
-           <div className="relative z-10 w-full h-[450px] sm:h-[350px] lg:h-[500px] rounded-l-2xl sm:rounded-l-[2.5rem] rounded-r-none overflow-hidden shadow-2xl border-2 sm:border-4 border-r-0 border-white -mr-4 sm:-mr-6 lg:-mr-8">
+           <div className="relative z-10 w-full h-[450px] sm:h-[350px] lg:h-[600px] rounded-l-2xl sm:rounded-l-[2.5rem] rounded-r-none overflow-hidden shadow-2xl border-2 sm:border-4 border-r-0 border-white -mr-4 sm:-mr-6 lg:-mr-8">
             {/* <div className="relative z-10 w-full aspect-3/4 sm:aspect-4/3 lg:aspect-4/3 rounded-l-2xl sm:rounded-l-[2.5rem] rounded-r-none overflow-hidden shadow-2xl border-2 sm:border-4 border-r-0 border-white -mr-4 sm:-mr-6 lg:-mr-8"> */}
               <div className="absolute inset-0 bg-slate-900/10 z-10"></div>
               <img
