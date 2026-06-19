@@ -106,7 +106,7 @@ export default function Hero() {
             {/* <div className="relative z-10 w-full aspect-3/4 sm:aspect-4/3 lg:aspect-4/3 rounded-l-2xl sm:rounded-l-[2.5rem] rounded-r-none overflow-hidden shadow-2xl border-2 sm:border-4 border-r-0 border-white -mr-4 sm:-mr-6 lg:-mr-8"> */}
               <div className="absolute inset-0 bg-slate-900/10 z-10"></div>
               <img
-                src="public\homepage-image.png"
+                src="/homepage-image.png"
                 sizes="(max-width: 640px) 612px, 1024px"
                 alt="Professional technician fixing an AC unit"
                 fetchPriority="high"
